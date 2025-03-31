@@ -1,29 +1,29 @@
+import { useTranslation } from "react-i18next";
+
 export default function WhyChooseWe() {
+  const { t } = useTranslation();
   const CardsInfo = [
     {
       icon: "fi fi-rr-bolt",
-      title: "Tezkor Gilam Yuvish Xizmati",
-      description:
-        "Arizalar kuniga 24 soat qabul qilinadi. Agar shoshilinch gilam yuvish kerak bo'lsa, biz darhol yetib borishimiz mumkin. Shungaqaramay, sifat mukammal bo'lib qoladi.",
+      title: t("whyChooseUsCard1"),
+      description: t("whyChooseUsCard1Description"),
     },
     {
       icon: "fi fi-rr-badget-check-alt",
-      title: "Yetuk Mutaxassislarimiz",
-      description:
-        "Bizning xodimlarimiz har bir jarayonni puxta amalga oshiradi: gilamlarni qabul qilish, yuvishga tayyorlash, to'liq tozalash, quritish va yakuniy nazorat.",
+      title: t("whyChooseUsCard2"),
+      description: t("whyChooseUsCard2Description"),
     },
     {
       icon: "fi fi-rr-handshake",
-      title: "Sizga Maqul Va Qulay Vaqtda",
-      description:
-        "Siz o'zingiz uchun maqul va qulay vaqtni tanlang va gilamlaringizni yuvish uchun bizga murojaat qiling. Sizga kafolatlangan va samarali natijani ta’minlaymiz.",
+      title: t("whyChooseUsCard3"),
+      description: t("whyChooseUsCard3Description"),
     },
   ];
   return (
-    <div>
+    <div id="whyWe">
       <div className="border-b-2 border-b-[#4C5269]">
         <p className="text-3xl mt-10 text-[#4C5269] font-semibold">
-          Nima uchun bizni tanlashadi?
+          {t("whyChooseUs")}
         </p>
       </div>
       <div className="grid grid-cols-3 gap-5 max-sm:grid-cols-1 max-sm:mt-10">

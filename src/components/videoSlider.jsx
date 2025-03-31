@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-
+import { useTranslation } from "react-i18next";
 const initialVideos = [
   "/videos/video-1 (1).mp4",
   "/videos/video-1 (2).mp4",
@@ -8,6 +8,7 @@ const initialVideos = [
 ];
 
 export default function VideoSlider() {
+  const { t } = useTranslation();
   const [videos, setVideos] = useState(initialVideos);
   const [translateX, setTranslateX] = useState(0);
   const startX = useRef(0);
@@ -51,7 +52,7 @@ export default function VideoSlider() {
   return (
     <div>
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold text-center">
-        Projects from the workplace.
+        {t("workPlaceTitle")}
       </p>
       <div
         className="relative w-full max-w-4xl mx-auto select-none overflow-hidden mt-10"

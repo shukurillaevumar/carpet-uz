@@ -5,18 +5,21 @@ import gilamPhoto from "../images/gilam.png";
 import pardaPhoto from "../images/parda.png";
 import ContactUs from "./contactUs";
 
+import { useTranslation } from "react-i18next";
+
 export default function serviceTypes() {
+  const { t } = useTranslation();
   const cardInfo = [
-    { imgSrc: cleanPhoto, title: "We Don't Just Clean Carpets" },
-    { imgSrc: dazmolPhoto, title: "All Types of Furniture" },
-    { imgSrc: pardaPhoto, title: "All Types of Curtains" },
-    { imgSrc: gilamPhoto, title: "All Types of Carpets" },
-    { imgSrc: adyolPhoto, title: "All Types of Blankets" },
+    { imgSrc: cleanPhoto, title: t("serviceCardTitle1") },
+    { imgSrc: dazmolPhoto, title: t("serviceCardTitle2") },
+    { imgSrc: pardaPhoto, title: t("serviceCardTitle3") },
+    { imgSrc: gilamPhoto, title: t("serviceCardTitle4") },
+    { imgSrc: adyolPhoto, title: t("serviceCardTitle5") },
   ];
   return (
-    <div cla>
+    <div id="service">
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold">
-        Service Types
+        {t("serviceType")}
       </p>
       <div className="grid grid-cols-2 mt-10 gap-15 max-sm:grid-cols-1 max-sm:gap-5">
         {cardInfo.map(({ imgSrc, title }, index) => (

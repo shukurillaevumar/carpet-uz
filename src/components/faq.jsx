@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-
+import { useTranslation } from "react-i18next";
 export default function Faq() {
+  const { t } = useTranslation();
+
   const dropdowns = [
     {
       title: "How long does washing carpets take?",
@@ -43,8 +45,11 @@ export default function Faq() {
   };
 
   return (
-    <div className="border-t-2 mt-4 pt-4 flex justify-between max-sm:flex-col max-sm:items-center">
-      <p className="text-3xl text-[#4C5269] font-semibold">FAQ</p>
+    <div
+      className="border-t-2 mt-4 pt-4 flex justify-between max-sm:flex-col max-sm:items-center"
+      id="faq"
+    >
+      <p className="text-3xl text-[#4C5269] font-semibold">{t("faq")}</p>
       <div className="flex flex-col gap-4 w-2/3 max-sm:w-full">
         {dropdowns.map((dropdown, index) => (
           <div key={index} className="rounded-lg shadow-md bg-white">

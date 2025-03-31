@@ -10,7 +10,10 @@ import Img4 from "../images/user images/samiya.jpg";
 import Img5 from "../images/user images/nigora.jpg";
 import Img6 from "../images/user images/barno.jpg";
 
+import { useTranslation } from "react-i18next";
+
 export default function Comments() {
+  const { t } = useTranslation();
   const comments = [
     {
       name: "Lobar",
@@ -50,9 +53,9 @@ export default function Comments() {
     },
   ];
   return (
-    <div>
+    <div id="comments">
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold text-center">
-        Comments
+        {t("comments")}
       </p>
       <Swiper
         spaceBetween={30}

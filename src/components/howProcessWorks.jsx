@@ -1,25 +1,27 @@
+import { useTranslation } from "react-i18next";
+
 export default function HowProcessWorks() {
+  const { t } = useTranslation();
   const cardsInfo = [
     {
       icon: "fi fi-rr-phone-call",
-      title: "Call Us",
-      description:
-        "Call or leave a request on the website (we'll clarify the details and provide the price).",
+      title: t("workProcessCard1"),
+      description: t("workProcessDesc1"),
     },
     {
       icon: "fi fi-rr-shipping-fast",
-      title: "Place an Order",
-      description: "Order carpet cleaning at home or in the factory.",
+      title: t("workProcessCard2"),
+      description: t("workProcessDesc2"),
     },
     {
       icon: "fi fi-rr-document-signed",
-      title: "Contract",
-      description: "We will sign a formal contract and start the work.",
+      title: t("workProcessCard3"),
+      description: t("workProcessDesc3"),
     },
     {
       icon: "fi fi-rr-tire-rugged",
-      title: "Carpet Pickup",
-      description: "We will pick up your carpets for free.",
+      title: t("workProcessCard4"),
+      description: t("workProcessDesc4"),
     },
     {
       icon: "fi fi-rr-vacuum",
@@ -49,7 +51,7 @@ export default function HowProcessWorks() {
   return (
     <div>
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold text-center">
-        How the Process Works
+        {t("workProcessTitle")}
       </p>
       <div className="grid grid-cols-4 gap-5 mt-10 max-sm:grid-cols-1">
         {cardsInfo.map(({ icon, title, description, button }, index) => (

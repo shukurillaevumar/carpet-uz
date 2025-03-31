@@ -1,12 +1,14 @@
 import { useState } from "react";
 import beforeImg from "../images/before.jpg";
 import afterImg from "../images/after.jpg";
+import { useTranslation } from "react-i18next";
 export default function Compare() {
   const [sliderPosition, setSliderPosition] = useState(50);
+  const { t } = useTranslation();
   return (
     <div>
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold text-center max-sm:text-2xl">
-        Qanday natijaga erishayotganimizni ko`ring
+        {t("achievedRes")}
       </p>
       <div className="relative w-[800px] h-[500px] mx-auto overflow-hidden rounded-lg shadow-lg mt-10 max-sm:w-auto max-sm:h-[300px]">
         {/* Левая (до) */}

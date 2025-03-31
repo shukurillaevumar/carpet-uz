@@ -1,6 +1,7 @@
 import img from "../images/footer/Image.png";
-
+import { useTranslation } from "react-i18next";
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <div
       className="p-4 mt-10 rounded-xl flex justify-around items-center"
@@ -10,8 +11,8 @@ export default function Footer() {
       }}
     >
       <div className="bg-white p-4 rounded-xl w-1/2 flex flex-col gap-5 max-sm:w-full">
-        <p className="text-4xl font-semibold">
-          Leave your <br /> information
+        <p className="text-4xl font-semibold max-sm:text-2xl">
+          {t("leaveInf")}
         </p>
         <form className="flex flex-col gap-5">
           <input

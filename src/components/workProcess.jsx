@@ -4,8 +4,10 @@ import Img3 from "../images/work process images/temir.png";
 import Img4 from "../images/work process images/tozalovchi.png";
 import Img5 from "../images/work process images/tozaman.png";
 import ContactUs from "./contactUs";
+import { useTranslation } from "react-i18next";
 
 export default function WorkProcess() {
+  const { t } = useTranslation();
   const imgInfo = [
     { imgSrc: Img1 },
     { imgSrc: Img2 },
@@ -17,7 +19,7 @@ export default function WorkProcess() {
   return (
     <div>
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold">
-        Work Process
+        {t("workProcess")}
       </p>
       <div className="grid grid-cols-3 gap-4 mt-10 max-sm:grid-cols-1">
         {imgInfo.map(({ imgSrc }, index) => (
