@@ -4,7 +4,7 @@ import ContactUs from "./contactUs";
 
 export default function Main() {
   return (
-    <div className="flex mt-10 justify-between relative">
+    <div className="flex mt-10 justify-between relative max-sm:h-[420px]">
       <div className="flex flex-col items-start gap-10 max-sm:absolute max-sm:p-4 max-sm:gap-4">
         <p className="text-7xl font-semibold text-[#FEB640] max-sm:text-3xl max-sm:text-white">
           Gilam yuvish xizmati
