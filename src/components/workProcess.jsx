@@ -19,7 +19,7 @@ export default function WorkProcess() {
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold">
         Work Process
       </p>
-      <div className="grid grid-cols-3 gap-4 mt-10">
+      <div className="grid grid-cols-3 gap-4 mt-10 max-sm:grid-cols-1">
         {imgInfo.map(({ imgSrc }, index) => (
           <div
             key={index}

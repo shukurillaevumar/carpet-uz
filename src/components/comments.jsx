@@ -55,12 +55,16 @@ export default function Comments() {
         Comments
       </p>
       <Swiper
-        slidesPerView={3}
         spaceBetween={30}
         pagination={{ clickable: true }}
         grabCursor={true}
         modules={[Pagination]}
         className="mySwiper mt-10"
+        breakpoints={{
+          0: { slidesPerView: 1 }, // Любой экран до 640px - 1 слайд
+          640: { slidesPerView: 2 }, // От 640px - 2 слайда
+          1024: { slidesPerView: 3 }, // От 1024px - 3 слайда
+        }}
       >
         {comments.map((comment, index) => (
           <SwiperSlide

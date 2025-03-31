@@ -9,7 +9,7 @@ export default function Footer() {
           "radial-gradient(circle, rgba(4,162,186,1) 0%, rgba(2,227,214,1) 100%)",
       }}
     >
-      <div className="bg-white p-4 rounded-xl w-1/2 flex flex-col gap-5">
+      <div className="bg-white p-4 rounded-xl w-1/2 flex flex-col gap-5 max-sm:w-full">
         <p className="text-4xl font-semibold">
           Leave your <br /> information
         </p>
@@ -29,7 +29,7 @@ export default function Footer() {
           </button>
         </form>
       </div>
-      <img src={img} alt="img" />
+      <img src={img} alt="img" className="max-sm:hidden" />
     </div>
   );
 }

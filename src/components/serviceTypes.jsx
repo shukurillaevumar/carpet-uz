@@ -18,14 +18,16 @@ export default function serviceTypes() {
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold">
         Service Types
       </p>
-      <div className="grid grid-cols-2 mt-10 gap-15">
+      <div className="grid grid-cols-2 mt-10 gap-15 max-sm:grid-cols-1 max-sm:gap-5">
         {cardInfo.map(({ imgSrc, title }, index) => (
           <div
             key={index}
             className="flex justify-center items-center flex-col bg-[#F3F6F6] rounded-xl gap-5 pb-6"
           >
             <img src={imgSrc} className="w-full" alt="img" />
-            <p className="text-[#2C788D] text-3xl font-semibold">{title}</p>
+            <p className="text-[#2C788D] text-3xl font-semibold max-sm:text-center">
+              {title}
+            </p>
             <ContactUs />
           </div>
         ))}

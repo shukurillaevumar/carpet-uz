@@ -51,7 +51,7 @@ export default function HowProcessWorks() {
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold text-center">
         How the Process Works
       </p>
-      <div className="grid grid-cols-4 gap-5 mt-10">
+      <div className="grid grid-cols-4 gap-5 mt-10 max-sm:grid-cols-1">
         {cardsInfo.map(({ icon, title, description, button }, index) => (
           <div
             key={index}

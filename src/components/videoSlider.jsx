@@ -72,7 +72,7 @@ export default function VideoSlider() {
               key={index}
               src={video}
               controls
-              className="w-1/4 h-[500px] object-cover rounded-lg shadow-lg"
+              className="w-1/4 h-[500px] object-cover rounded-lg shadow-lg max-sm:w-full"
             >
               Ваш браузер не поддерживает тег video.
             </video>

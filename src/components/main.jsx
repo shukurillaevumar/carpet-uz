@@ -4,17 +4,22 @@ import ContactUs from "./contactUs";
 
 export default function Main() {
   return (
-    <div className="flex mt-10 justify-between">
-      <div className="flex flex-col items-start gap-10">
-        <p className="text-7xl font-semibold text-[#FEB640]">
+    <div className="flex mt-10 justify-between relative">
+      <div className="flex flex-col items-start gap-10 max-sm:absolute max-sm:p-4 max-sm:gap-4">
+        <p className="text-7xl font-semibold text-[#FEB640] max-sm:text-3xl max-sm:text-white">
           Gilam yuvish xizmati
         </p>
-        <p className="text-lg">
+        <p className="text-lg max-sm:text-white">
           Biz Toshkentda 10 yildan beri <br /> professional gilam yuvish
           ishlarini olib <br /> boramiz, shuning uchun gilamlarni <br /> qanday
           toza va sifatli yuvishni bilamiz.
         </p>
-        <img src={RounedPhoto} alt="img" width={250} />
+        <img
+          src={RounedPhoto}
+          alt="img"
+          width={250}
+          className="max-sm:hidden"
+        />
         <ContactUs />
       </div>
 

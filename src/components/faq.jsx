@@ -43,9 +43,9 @@ export default function Faq() {
   };
 
   return (
-    <div className="border-t-2 mt-4 pt-4 flex justify-between">
+    <div className="border-t-2 mt-4 pt-4 flex justify-between max-sm:flex-col max-sm:items-center">
       <p className="text-3xl text-[#4C5269] font-semibold">FAQ</p>
-      <div className="flex flex-col gap-4 w-2/3">
+      <div className="flex flex-col gap-4 w-2/3 max-sm:w-full">
         {dropdowns.map((dropdown, index) => (
           <div key={index} className="rounded-lg shadow-md bg-white">
             <button

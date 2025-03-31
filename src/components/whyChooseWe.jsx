@@ -26,12 +26,15 @@ export default function WhyChooseWe() {
           Nima uchun bizni tanlashadi?
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-5 max-sm:grid-cols-1 max-sm:mt-10">
         {CardsInfo.map(({ icon, title, description }, index) => (
-          <div key={index} className="flex flex-col gap-3 mt-10">
+          <div
+            key={index}
+            className="flex flex-col gap-3 mt-10 max-sm:border max-sm:rounded-xl max-sm:p-2 max-sm:border-emerald-400 max-sm:mt-0"
+          >
             <i className={`${icon} text-4xl text-[#04A2BA]`}></i>
-            <p className="text-xl font-semibold">{title}</p>
-            <p className="text-lg font-semibold text-[#676D83]">
+            <p className="text-xl font-semibold max-sm:text-2xl">{title}</p>
+            <p className="text-lg font-semibold text-[#676D83] max-sm:text-sm">
               {description}
             </p>
           </div>

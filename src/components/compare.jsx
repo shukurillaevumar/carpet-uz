@@ -8,7 +8,7 @@ export default function Compare() {
       <p className="text-3xl mt-10 text-[#4C5269] font-semibold text-center">
         Qanday natijaga erishayotganimizni ko`ring
       </p>
-      <div className="relative w-[800px] h-[500px] mx-auto overflow-hidden rounded-lg shadow-lg mt-10">
+      <div className="relative w-[800px] h-[500px] mx-auto overflow-hidden rounded-lg shadow-lg mt-10 max-sm:w-auto max-sm:h-[300px]">
         {/* Левая (до) */}
         <div className="absolute inset-0">
           <img
