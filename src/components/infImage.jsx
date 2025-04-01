@@ -2,11 +2,18 @@ import Image from "../images/Image.png";
 import ContactUs from "./contactUs";
 
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 export default function InfImage() {
   const { t } = useTranslation();
   return (
-    <div className="flex justify-center items-center mt-10 relative">
+    <motion.div
+      className="flex justify-center items-center mt-10 relative"
+      initial={{ opacity: 0, x: -100 }} // Начальное состояние (невидим и слева)
+      whileInView={{ opacity: 1, x: 0 }} // При появлении — плавное появление
+      transition={{ duration: 0.8, ease: "easeOut" }} // Плавная анимация
+      viewport={{ once: true, amount: 0.5 }} // Повторяет анимацию, но не исчезает
+    >
       <img
         src={Image}
         alt="img"
@@ -27,6 +34,6 @@ export default function InfImage() {
         </p>
         <ContactUs />
       </div>
-    </div>
+    </motion.div>
   );
 }

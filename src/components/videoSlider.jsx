@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 const initialVideos = [
   "/videos/video-1 (1).mp4",
   "/videos/video-1 (2).mp4",
@@ -51,9 +52,15 @@ export default function VideoSlider() {
 
   return (
     <div>
-      <p className="text-3xl mt-10 text-[#4C5269] font-semibold text-center">
+      <motion.p
+        className="text-3xl mt-10 text-[#4C5269] font-semibold text-center"
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         {t("workPlaceTitle")}
-      </p>
+      </motion.p>
       <div
         className="relative w-full max-w-4xl mx-auto select-none overflow-hidden mt-10"
         onMouseDown={handleStart}
