@@ -3,6 +3,7 @@ import ContactUs from "./contactUs";
 
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 export default function InfImage() {
   const { t } = useTranslation();
@@ -32,7 +33,9 @@ export default function InfImage() {
         <p className="text-4xl font-semibold max-sm:text-xl">
           998-95-060-30-80
         </p>
-        <ContactUs />
+        <Link to="faq" smooth={true} duration={500}>
+          <ContactUs />
+        </Link>
       </div>
     </motion.div>
   );

@@ -61,6 +61,7 @@ export default function Comments() {
         spaceBetween={30}
         pagination={{ clickable: true }}
         grabCursor={true}
+        loop={true}
         modules={[Pagination]}
         className="mySwiper mt-10"
         breakpoints={{

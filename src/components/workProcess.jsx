@@ -6,6 +6,8 @@ import Img5 from "../images/work process images/tozaman.png";
 import ContactUs from "./contactUs";
 import { useTranslation } from "react-i18next";
 
+import { Link } from "react-scroll";
+
 export default function WorkProcess() {
   const { t } = useTranslation();
   const imgInfo = [
@@ -38,7 +40,9 @@ export default function WorkProcess() {
 
             {/* Кнопка появляется по центру при наведении */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <ContactUs />
+              <Link to="faq" smooth={true} duration={500}>
+                <ContactUs />
+              </Link>
             </div>
           </div>
         ))}

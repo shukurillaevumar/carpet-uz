@@ -1,5 +1,6 @@
-import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 const initialVideos = [
   "/videos/video-1 (1).mp4",
@@ -10,45 +11,6 @@ const initialVideos = [
 
 export default function VideoSlider() {
   const { t } = useTranslation();
-  const [videos, setVideos] = useState(initialVideos);
-  const [translateX, setTranslateX] = useState(0);
-  const startX = useRef(0);
-  const isDragging = useRef(false);
-  const videoCounter = useRef(initialVideos.length + 1); // Чтобы генерировать новые видео
-
-  const generateNewVideo = () => {
-    const newVideo = `/videos/video${videoCounter.current}.mp4`;
-    videoCounter.current += 1;
-    return newVideo;
-  };
-
-  const handleStart = (e) => {
-    isDragging.current = true;
-    startX.current = e.touches ? e.touches[0].clientX : e.clientX;
-  };
-
-  const handleMove = (e) => {
-    if (!isDragging.current) return;
-    const currentX = e.touches ? e.touches[0].clientX : e.clientX;
-    setTranslateX(currentX - startX.current);
-  };
-
-  const handleEnd = () => {
-    isDragging.current = false;
-
-    if (translateX < -50) {
-      // Свайп влево (добавить видео справа)
-      const newVideo = generateNewVideo();
-      setVideos((prev) => [...prev.slice(1), newVideo]);
-    } else if (translateX > 50) {
-      // Свайп вправо (добавить видео слева)
-      const newVideo = generateNewVideo();
-      setVideos((prev) => [newVideo, ...prev.slice(0, -1)]);
-    }
-
-    // Сбрасываем положение
-    setTranslateX(0);
-  };
 
   return (
     <div>
@@ -61,31 +23,26 @@ export default function VideoSlider() {
       >
         {t("workPlaceTitle")}
       </motion.p>
-      <div
-        className="relative w-full max-w-4xl mx-auto select-none overflow-hidden mt-10"
-        onMouseDown={handleStart}
-        onMouseMove={handleMove}
-        onMouseUp={handleEnd}
-        onMouseLeave={handleEnd}
-        onTouchStart={handleStart}
-        onTouchMove={handleMove}
-        onTouchEnd={handleEnd}
-      >
-        <div
-          className="flex gap-4 transition-transform duration-300 ease-out"
-          style={{ transform: `translateX(${translateX}px)` }}
+      <div className="w-full max-w-screen-lg mx-auto">
+        <Swiper
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          loop={true}
+          touchRatio={2}
+          modules={[Pagination]}
+          className="mySwiper mt-10"
+          breakpoints={{
+            0: { slidesPerView: 1 }, // Любой экран до 640px - 1 слайд
+            640: { slidesPerView: 2 }, // От 640px - 2 слайда
+            1024: { slidesPerView: 3 }, // От 1024px - 3 слайда
+          }}
         >
-          {videos.map((video, index) => (
-            <video
-              key={index}
-              src={video}
-              controls
-              className="w-1/4 h-[500px] object-cover rounded-lg shadow-lg max-sm:w-full"
-            >
-              Ваш браузер не поддерживает тег video.
-            </video>
+          {initialVideos.map((video, index) => (
+            <SwiperSlide key={index} className="rounded-xl shadow-lg">
+              <video src={video} controls autoPlay muted />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import RounedPhoto from "../images/rounded-photo-main.png";
 import LeftPhoto from "../images/main-left-photo.png";
 import ContactUs from "./contactUs";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
 
 export default function Main() {
   const { t } = useTranslation();
@@ -21,7 +22,9 @@ export default function Main() {
           width={250}
           className="max-sm:hidden"
         />
-        <ContactUs />
+        <Link to="faq" smooth={true} duration={500}>
+          <ContactUs />
+        </Link>
       </div>
 
       <img src={LeftPhoto} alt="img" width={500} className="rounded-xl" />

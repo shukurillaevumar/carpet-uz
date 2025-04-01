@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 export default function HowProcessWorks() {
   const { t } = useTranslation();
   const cardsInfo = [
@@ -40,8 +41,10 @@ export default function HowProcessWorks() {
     },
     {
       button: (
-        <button className="text-lg text-white bg-[#FEB640] p-4 rounded-xl text-center">
-          Order Now
+        <button className="text-lg text-white bg-[#FEB640] p-4 rounded-xl text-center cursor-pointer">
+          <Link to="faq" smooth={true} duration={500}>
+            Order Now
+          </Link>
         </button>
       ),
       description:

@@ -8,6 +8,8 @@ import ContactUs from "./contactUs";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
+import { Link } from "react-scroll";
+
 export default function serviceTypes() {
   const { t } = useTranslation();
   const cardInfo = [
@@ -38,7 +40,9 @@ export default function serviceTypes() {
             <p className="text-[#2C788D] text-3xl font-semibold max-sm:text-center">
               {title}
             </p>
-            <ContactUs />
+            <Link to="faq" smooth={true} duration={500}>
+              <ContactUs />
+            </Link>
           </div>
         ))}
       </motion.div>
