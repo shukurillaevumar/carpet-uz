@@ -57,7 +57,7 @@ export default function VideoSlider() {
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         {t("workPlaceTitle")}
       </motion.p>

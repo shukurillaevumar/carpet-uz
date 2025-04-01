@@ -27,7 +27,7 @@ export default function serviceTypes() {
         initial={{ opacity: 0, x: -100 }} // Начальное состояние (невидим и слева)
         whileInView={{ opacity: 1, x: 0 }} // При появлении — плавное появление
         transition={{ duration: 0.8, ease: "easeOut" }} // Плавная анимация
-        viewport={{ once: true, amount: 0.5 }} // Повторяет анимацию, но не исчезает
+        viewport={{ once: true, amount: 0.1 }} // Повторяет анимацию, но не исчезает
       >
         {cardInfo.map(({ imgSrc, title }, index) => (
           <div
