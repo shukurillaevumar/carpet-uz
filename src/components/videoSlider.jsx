@@ -15,7 +15,7 @@ export default function VideoSlider() {
   return (
     <div>
       <motion.p
-        className="text-3xl mt-10 text-[#4C5269] font-semibold text-center"
+        className="text-3xl mt-10 text-[#E76421] font-semibold text-center"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

@@ -22,7 +22,7 @@ export default function WhyChooseWe() {
   return (
     <div id="whyWe">
       <div className="border-b-2 border-b-[#4C5269]">
-        <p className="text-3xl mt-10 text-[#4C5269] font-semibold">
+        <p className="text-3xl mt-10 text-[#E76421] font-semibold">
           {t("whyChooseUs")}
         </p>
       </div>
@@ -30,9 +30,9 @@ export default function WhyChooseWe() {
         {CardsInfo.map(({ icon, title, description }, index) => (
           <div
             key={index}
-            className="flex flex-col gap-3 mt-10 max-sm:border max-sm:rounded-xl max-sm:p-2 max-sm:border-emerald-400 max-sm:mt-0"
+            className="flex flex-col gap-3 mt-10 max-sm:border max-sm:rounded-xl max-sm:p-2 max-sm:border-[#E76421] max-sm:mt-0"
           >
-            <i className={`${icon} text-4xl text-[#04A2BA]`}></i>
+            <i className={`${icon} text-4xl text-[#E76421]`}></i>
             <p className="text-xl font-semibold max-sm:text-2xl">{title}</p>
             <p className="text-lg font-semibold text-[#676D83] max-sm:text-sm">
               {description}

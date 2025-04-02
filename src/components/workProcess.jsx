@@ -20,7 +20,7 @@ export default function WorkProcess() {
 
   return (
     <div>
-      <p className="text-3xl mt-10 text-[#4C5269] font-semibold">
+      <p className="text-3xl mt-10 text-[#E76421] font-semibold">
         {t("workProcess")}
       </p>
       <div className="grid grid-cols-3 gap-4 mt-10 max-sm:grid-cols-1">

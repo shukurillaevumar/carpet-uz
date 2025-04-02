@@ -12,10 +12,12 @@ export default function Main() {
       id="main"
     >
       <div className="flex flex-col items-start gap-10 max-sm:absolute max-sm:p-4 max-sm:gap-4">
-        <p className="text-7xl font-semibold text-[#FEB640] max-sm:text-3xl max-sm:text-white">
+        <p className="text-7xl font-semibold text-[#E76421] max-sm:text-3xl max-sm:text-white max-sm:bg-[#E76421] max-sm:rounded-xl max-sm:p-2">
           {t("cleaningService")}
         </p>
-        <p className="text-lg max-sm:text-white">{t("mainDescription")}</p>
+        <p className="text-lg max-sm:text-white max-sm:bg-[#E76421] max-sm:rounded-xl max-sm:p-2">
+          {t("mainDescription")}
+        </p>
         <img
           src={RounedPhoto}
           alt="img"

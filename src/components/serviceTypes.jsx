@@ -21,7 +21,7 @@ export default function serviceTypes() {
   ];
   return (
     <div id="service">
-      <p className="text-3xl mt-10 text-[#4C5269] font-semibold">
+      <p className="text-3xl mt-10 text-[#E76421] font-semibold">
         {t("serviceType")}
       </p>
       <motion.div
@@ -37,7 +37,7 @@ export default function serviceTypes() {
             className="flex justify-center items-center flex-col bg-[#F3F6F6] rounded-xl gap-5 pb-6"
           >
             <img src={imgSrc} className="w-full" alt="img" />
-            <p className="text-[#2C788D] text-3xl font-semibold max-sm:text-center">
+            <p className="text-[#E76421] text-3xl font-semibold text-center max-sm:text-center">
               {title}
             </p>
             <Link to="faq" smooth={true} duration={500}>

@@ -54,7 +54,7 @@ export default function Comments() {
   ];
   return (
     <div id="comments">
-      <p className="text-3xl mt-10 text-[#4C5269] font-semibold text-center">
+      <p className="text-3xl mt-10 text-[#E76421] font-semibold text-center">
         {t("comments")}
       </p>
       <Swiper
@@ -75,7 +75,7 @@ export default function Comments() {
             key={index}
             className="p-4 border rounded-xl shadow-lg min-h-52"
           >
-            <div className="min-h-60">
+            <div className="min-h-70">
               <div className="flex items-center gap-2">
                 <img
                   src={comment.imgSrc}

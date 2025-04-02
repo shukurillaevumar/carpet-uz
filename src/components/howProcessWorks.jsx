@@ -41,7 +41,7 @@ export default function HowProcessWorks() {
     },
     {
       button: (
-        <button className="text-lg text-white bg-[#FEB640] p-4 rounded-xl text-center cursor-pointer">
+        <button className="text-lg text-white bg-[#E76421] p-4 rounded-xl text-center cursor-pointer">
           <Link to="faq" smooth={true} duration={500}>
             Order Now
           </Link>
@@ -58,7 +58,7 @@ export default function HowProcessWorks() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.1 }}
     >
-      <p className="text-3xl mt-10 text-[#4C5269] font-semibold text-center">
+      <p className="text-3xl mt-10 text-[#E76421] font-semibold text-center">
         {t("workProcessTitle")}
       </p>
       <div className="grid grid-cols-4 gap-5 mt-10 max-sm:grid-cols-1">
@@ -68,7 +68,7 @@ export default function HowProcessWorks() {
             className="flex flex-col items-start justify-start gap-2 bg-[#F9F9F9] p-4 rounded-xl shadow-lg"
           >
             <div className="flex gap-4 items-center">
-              <i className={`${icon} text-4xl text-[#04A2BA]`} />
+              <i className={`${icon} text-4xl text-[#E76421]`} />
               {button}
               <p>{title}</p>
             </div>

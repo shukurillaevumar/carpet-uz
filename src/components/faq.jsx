@@ -49,15 +49,15 @@ export default function Faq() {
       className="border-t-2 mt-4 pt-4 flex justify-between max-sm:flex-col max-sm:items-center"
       id="faq"
     >
-      <p className="text-3xl text-[#4C5269] font-semibold">{t("faq")}</p>
+      <p className="text-3xl text-[#E76421] font-semibold">{t("faq")}</p>
       <div className="flex flex-col gap-4 w-2/3 max-sm:w-full">
         {dropdowns.map((dropdown, index) => (
           <div key={index} className="rounded-lg shadow-md bg-white">
             <button
-              className="flex justify-between items-center w-full px-4 py-3 text-lg font-medium bg-gray-100 hover:bg-gray-200 rounded-lg"
+              className="flex justify-between items-center w-full px-4 py-3 text-lg font-medium bg-[#E76421] rounded-lg cursor-pointer"
               onClick={() => toggleDropdown(index)}
             >
-              <span className="text-[#676D83]">{dropdown.title}</span>
+              <span className="text-white">{dropdown.title}</span>
               <ChevronDownIcon
                 className={`w-6 h-6 transition-transform ${
                   openIndex === index ? "rotate-180" : ""
@@ -70,7 +70,7 @@ export default function Faq() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.3 }}
                 className="px-4 py-2 text-gray-700"
               >
                 {dropdown.content}

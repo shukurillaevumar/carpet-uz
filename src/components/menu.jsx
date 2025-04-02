@@ -19,27 +19,27 @@ export default function Menu1() {
         {/* Навигация для больших экранов */}
         <ul className="hidden md:flex space-x-6 text-lg font-semibold">
           <Link to="main" smooth={true} duration={500}>
-            <li className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <li className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("home")}
             </li>
           </Link>
           <Link to="whyWe" smooth={true} duration={500}>
-            <li className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <li className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("whyUs")}
             </li>
           </Link>
           <Link to="service" smooth={true} duration={500}>
-            <li className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <li className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("services")}
             </li>
           </Link>
           <Link to="comments" smooth={true} duration={500}>
-            <li className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <li className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("comments")}
             </li>
           </Link>
           <Link to="faq" smooth={true} duration={500}>
-            <li className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <li className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("faq")}
             </li>
           </Link>
@@ -64,27 +64,27 @@ export default function Menu1() {
       {isOpen && (
         <div className="md:hidden flex flex-col items-center space-y-4 mt-4">
           <Link to="main" smooth={true} duration={500}>
-            <p className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <p className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("home")}
             </p>
           </Link>
           <Link to="whyWe" smooth={true} duration={500}>
-            <p className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <p className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("whyUs")}
             </p>
           </Link>
           <Link to="service" smooth={true} duration={500}>
-            <p className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <p className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("services")}
             </p>
           </Link>
           <Link to="comments" smooth={true} duration={500}>
-            <p className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <p className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("comments")}
             </p>
           </Link>
           <Link to="faq" smooth={true} duration={500}>
-            <p className="cursor-pointer border-2 border-white hover:border-b-amber-300 hover:text-amber-300">
+            <p className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("faq")}
             </p>
           </Link>

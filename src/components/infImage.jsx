@@ -18,7 +18,7 @@ export default function InfImage() {
       <img
         src={Image}
         alt="img"
-        className="max-sm:h-120 object-cover rounded-xl"
+        className="max-sm:h-120 object-cover rounded-xl md:h-150"
       />
       <div className="flex flex-col text-white absolute gap-5 left-20 max-sm:left-2">
         <p className="text-5xl font-semibold max-sm:text-2xl w-140 max-sm:w-auto">
