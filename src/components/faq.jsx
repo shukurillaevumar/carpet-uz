@@ -59,7 +59,7 @@ export default function Faq() {
             >
               <span className="text-white">{dropdown.title}</span>
               <ChevronDownIcon
-                className={`w-6 h-6 transition-transform ${
+                className={`w-6 h-6 shrink-0 transition-transform ${
                   openIndex === index ? "rotate-180" : ""
                 }`}
               />
