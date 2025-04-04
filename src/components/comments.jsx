@@ -18,37 +18,37 @@ export default function Comments() {
     {
       name: "Lobar",
       telegram: "@hyot",
-      text: "There were stains on the carpets, and I thought nothing could remove them. But this service amazed me – the stains completely disappeared! Highly recommend.",
+      text: t("comment1"),
       imgSrc: Img1,
     },
     {
       name: "Barno",
       telegram: "@barno",
-      text: "I gave my carpets for cleaning and am very satisfied with the result. The carpets came back perfectly clean! Fast and quality service. Thank you!",
+      text: t("comment2"),
       imgSrc: Img2,
     },
     {
       name: "Bonu",
-      telegram: "@bonu_hamidova",
-      text: "My carpets were dusty and had an odor. I can't believe they look like new after this cleaning! Excellent service and great customer care.",
+      telegram: "@bonu_",
+      text: t("comment3"),
       imgSrc: Img3,
     },
     {
       name: "Shahlo",
       telegram: "@shahlo",
-      text: "Amazing work! My carpets look brand new again. Super fast service and very friendly staff.",
+      text: t("comment4"),
       imgSrc: Img4,
     },
     {
       name: "Dilnoza",
       telegram: "@dilnoza",
-      text: "Very professional cleaning! They removed even the toughest stains. Definitely recommend to everyone!",
+      text: t("comment5"),
       imgSrc: Img5,
     },
     {
       name: "Zarina",
       telegram: "@zarina",
-      text: "The best carpet cleaning service I’ve ever used! They care about every detail. Will use again for sure!",
+      text: t("comment6"),
       imgSrc: Img6,
     },
   ];
@@ -73,9 +73,9 @@ export default function Comments() {
         {comments.map((comment, index) => (
           <SwiperSlide
             key={index}
-            className="p-4 border rounded-xl shadow-lg min-h-52"
+            className="p-4 border rounded-xl shadow-lg h-52"
           >
-            <div className="min-h-70">
+            <div className="h-70">
               <div className="flex items-center gap-2">
                 <img
                   src={comment.imgSrc}

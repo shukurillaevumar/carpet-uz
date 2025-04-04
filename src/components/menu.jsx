@@ -36,17 +36,17 @@ export default function Menu1() {
   };
   return (
     <nav className="bg-white shadow-md sticky top-0 z-2">
-      <div className="flex justify-center gap-10 items-center max-sm:gap-4">
+      <div className="flex justify-center gap-10 items-center max-xl:gap-4 max-xl:justify-around">
         <Link to="main" smooth={true} duration={500}>
           <img
             src={Logo}
             width={180}
-            className="max-sm:w-[150px] cursor-pointer"
+            className="max-xl:w-[150px] cursor-pointer"
             alt="Logo"
           />
         </Link>
         {/* Навигация для больших экранов */}
-        <ul className="hidden md:flex space-x-6 text-lg font-semibold">
+        <ul className="hidden xl:flex space-x-6 text-lg font-semibold">
           <Link to="main" smooth={true} duration={500}>
             <li className="cursor-pointer border-2 border-white hover:border-b-[#E76421] hover:text-[#E76421]">
               {t("home")}
@@ -74,7 +74,7 @@ export default function Menu1() {
           </Link>
         </ul>
         <LanguageChanger />
-        <div className="max-sm:hidden">
+        <div className="max-xl:hidden">
           <Link to="faq" smooth={true} duration={500}>
             <ContactUs />
           </Link>
@@ -82,7 +82,7 @@ export default function Menu1() {
 
         {/* Бургер-кнопка */}
         <button
-          className="md:hidden p-2 rounded focus:outline-none"
+          className="xl:hidden p-2 rounded focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -93,7 +93,7 @@ export default function Menu1() {
       {isOpen && (
         <div
           ref={menuRef}
-          className={`md:hidden flex flex-col items-center space-y-4 mt-4 transition-all duration-300 ${
+          className={`xl:hidden flex flex-col items-center space-y-4 mt-4 transition-all duration-300 ${
             isOpen
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-2 pointer-events-none"

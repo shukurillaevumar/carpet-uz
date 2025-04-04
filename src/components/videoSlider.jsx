@@ -23,7 +23,7 @@ export default function VideoSlider() {
       >
         {t("workPlaceTitle")}
       </motion.p>
-      <div className="w-full max-w-screen-lg mx-auto">
+      <div className="w-full max-w-screen-lg mx-auto max-xl:w-1/2">
         <Swiper
           spaceBetween={30}
           pagination={{ clickable: true }}

@@ -9,7 +9,7 @@ export default function Compare() {
   return (
     <div>
       <motion.p
-        className="text-3xl mt-10 text-[#E76421] font-semibold text-center max-sm:text-2xl"
+        className="text-3xl mt-10 text-[#E76421] font-semibold text-center max-xl:text-2xl"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -17,7 +17,7 @@ export default function Compare() {
       >
         {t("achievedRes")}
       </motion.p>
-      <div className="relative w-[800px] h-[500px] mx-auto overflow-hidden rounded-lg shadow-lg mt-10 max-sm:w-auto max-sm:h-[300px]">
+      <div className="relative w-[800px] h-[500px] mx-auto overflow-hidden rounded-lg shadow-lg mt-10 max-xl:w-auto max-xl:h-[300px]">
         {/* Левая (до) */}
         <div className="absolute inset-0">
           <img

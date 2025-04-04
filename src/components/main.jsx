@@ -8,28 +8,32 @@ export default function Main() {
   const { t } = useTranslation();
   return (
     <div
-      className="flex mt-10 justify-between relative max-sm:h-[420px]"
+      className="flex mt-10 justify-between relative max-xl:h-[420px]"
       id="main"
     >
-      <div className="flex flex-col items-start gap-10 max-sm:absolute max-sm:p-4 max-sm:gap-4">
-        <p className="text-7xl font-semibold text-[#E76421] max-sm:text-3xl max-sm:text-white max-sm:bg-[#E76421] max-sm:rounded-xl max-sm:p-2">
+      <div className="flex flex-col items-start gap-10 max-xl:absolute max-xl:p-4 max-xl:gap-4">
+        <p className="text-7xl font-semibold text-[#E76421] max-xl:text-3xl max-xl:text-white max-xl:bg-[#E76421] max-xl:rounded-xl max-xl:p-2">
           {t("cleaningService")}
         </p>
-        <p className="text-lg max-sm:text-white max-sm:bg-[#E76421] max-sm:rounded-xl max-sm:p-2">
+        <p className="text-lg max-xl:text-white max-xl:bg-[#E76421] max-xl:rounded-xl max-xl:p-2">
           {t("mainDescription")}
         </p>
         <img
           src={RounedPhoto}
           alt="img"
           width={250}
-          className="max-sm:hidden"
+          className="max-xl:hidden"
         />
         <Link to="faq" smooth={true} duration={500}>
           <ContactUs />
         </Link>
       </div>
 
-      <img src={LeftPhoto} alt="img" width={500} className="rounded-xl" />
+      <img
+        src={LeftPhoto}
+        alt="img"
+        className="rounded-xl max-xl:w-full object-cover"
+      />
     </div>
   );
 }

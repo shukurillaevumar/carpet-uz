@@ -37,7 +37,7 @@ export default function serviceTypes() {
             className="flex justify-center items-center flex-col bg-[#F3F6F6] rounded-xl gap-5 pb-6"
           >
             <img src={imgSrc} className="w-full" alt="img" />
-            <p className="text-[#E76421] text-3xl font-semibold text-center max-sm:text-center">
+            <p className="text-[#E76421] text-3xl font-semibold text-center max-xl:text-center max-xl:text-xl">
               {title}
             </p>
             <Link to="faq" smooth={true} duration={500}>

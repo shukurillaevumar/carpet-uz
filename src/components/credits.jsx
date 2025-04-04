@@ -2,7 +2,7 @@ import logo from "../images/logo.png";
 
 export default function Credits() {
   return (
-    <div className="flex items-center gap-10 mt-10 max-sm:flex-col">
+    <div className="flex items-center gap-10 mt-10 max-xl:flex-col">
       <img src={logo} alt="logo" width={200} />
       <div className="flex flex-col gap-2">
         <p>Uzbekistan, Tashkent City</p>

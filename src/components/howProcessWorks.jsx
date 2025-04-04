@@ -26,29 +26,28 @@ export default function HowProcessWorks() {
     },
     {
       icon: "fi fi-rr-vacuum",
-      title: "Cleaning",
-      description: "We clean and wash carpets using German equipment.",
+      title: t("workProcessCard5"),
+      description: t("workProcessDesc5"),
     },
     {
       icon: "fi fi-rr-dryer-alt",
-      title: "Drying",
-      description: "We dry carpets without deformation or odor.",
+      title: t("workProcessCard6"),
+      description: t("workProcessDesc6"),
     },
     {
       icon: "fi fi-rr-scooter",
-      title: "Delivery",
-      description: "We will deliver your carpets at a convenient time for you.",
+      title: t("workProcessCard7"),
+      description: t("workProcessDesc7"),
     },
     {
       button: (
         <button className="text-lg text-white bg-[#E76421] p-4 rounded-xl text-center cursor-pointer">
           <Link to="faq" smooth={true} duration={500}>
-            Order Now
+            {`${t("workProcessCard8")}`}
           </Link>
         </button>
       ),
-      description:
-        "The best guarantee is our reputation, which we value! Trust us!",
+      description: `${t("workProcessDesc8")}`,
     },
   ];
   return (
@@ -61,7 +60,7 @@ export default function HowProcessWorks() {
       <p className="text-3xl mt-10 text-[#E76421] font-semibold text-center">
         {t("workProcessTitle")}
       </p>
-      <div className="grid grid-cols-4 gap-5 mt-10 max-sm:grid-cols-1">
+      <div className="grid grid-cols-4 gap-5 mt-10 max-xl:grid-cols-1">
         {cardsInfo.map(({ icon, title, description, button }, index) => (
           <div
             key={index}

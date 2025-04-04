@@ -18,19 +18,19 @@ export default function InfImage() {
       <img
         src={Image}
         alt="img"
-        className="max-sm:h-120 object-cover rounded-xl md:h-150"
+        className="max-xl:h-120 object-cover rounded-xl xl:h-150"
       />
-      <div className="flex flex-col text-white absolute gap-5 left-20 max-sm:left-2">
-        <p className="text-5xl font-semibold max-sm:text-2xl w-140 max-sm:w-auto">
+      <div className="flex flex-col text-white absolute gap-5 left-20 max-xl:left-2">
+        <p className="text-5xl font-semibold max-xl:text-2xl w-140 max-xl:w-auto">
           {t("infImageTitle")}
         </p>
-        <p className="text-xl max-sm:text-sm w-140 max-sm:w-auto">
+        <p className="text-xl max-xl:text-sm w-140 max-xl:w-auto">
           {t("infImageDescription")}
         </p>
-        <p className="text-4xl font-semibold max-sm:text-xl">
+        <p className="text-4xl font-semibold max-xl:text-xl">
           998-95-000-30-80
         </p>
-        <p className="text-4xl font-semibold max-sm:text-xl">
+        <p className="text-4xl font-semibold max-xl:text-xl">
           998-95-060-30-80
         </p>
         <Link to="faq" smooth={true} duration={500}>

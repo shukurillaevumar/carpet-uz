@@ -35,7 +35,7 @@ export default function WorkProcess() {
             <img
               src={imgSrc}
               alt="img"
-              className="w-full h-full object-cover rounded-xl transition-transform duration-300 ease-in-out group-hover:scale-110"
+              className="w-full h-full object-cover rounded-xl transition-transform duration-300 ease-in-out group-hover:scale-110 max-xl:w-1/2 max-xl:mx-auto"
             />
 
             {/* Кнопка появляется по центру при наведении */}

@@ -7,34 +7,28 @@ export default function Faq() {
 
   const dropdowns = [
     {
-      title: "How long does washing carpets take?",
-      content:
-        "The carpet washing process usually takes 3-5 days. During this time, carpets are deeply cleaned, dried, and prepared for delivery.",
+      title: t("faqTitle1"),
+      content: t("faqDesc1"),
     },
     {
-      title: "How is the price of your services determined?",
-      content:
-        "Prices are determined based on the size, material, and cleaning level of the carpet. We often provide prices based on square meters. For special orders, additional information is required to determine the price.",
+      title: t("faqTitle2"),
+      content: t("faqDesc2"),
     },
     {
-      title: "Will my carpets be damaged?",
-      content:
-        "No, our experienced specialists and modern equipment guarantee that carpets will not be damaged. We apply special cleaning methods suitable for each type of carpet.",
+      title: t("faqTitle3"),
+      content: t("faqDesc3"),
     },
     {
-      title: "What cleaning products do you use during the washing process?",
-      content:
-        "We use environmentally friendly and safe cleaning products for humans and animals. These products deeply clean carpets without causing damage.",
+      title: t("faqTitle4"),
+      content: t("faqDesc4"),
     },
     {
-      title: "Is there a carpet pickup and delivery service?",
-      content:
-        "Yes, we pick up and deliver your carpets for free at a convenient time for you. You only pay for the washing service.",
+      title: t("faqTitle5"),
+      content: t("faqDesc5"),
     },
     {
-      title: "Can any carpet be washed?",
-      content:
-        "We wash many types of carpets, including wool, silk, and synthetic carpets. However, for very delicate or antique carpets, we apply special cleaning methods or recommend alternative cleaning methods.",
+      title: t("faqTitle6"),
+      content: t("faqDesc6"),
     },
   ];
 
@@ -46,11 +40,11 @@ export default function Faq() {
 
   return (
     <div
-      className="border-t-2 mt-4 pt-4 flex justify-between max-sm:flex-col max-sm:items-center"
+      className="border-t-2 mt-4 pt-4 flex justify-between max-xl:flex-col max-xl:items-center"
       id="faq"
     >
       <p className="text-3xl text-[#E76421] font-semibold">{t("faq")}</p>
-      <div className="flex flex-col gap-4 w-2/3 max-sm:w-full">
+      <div className="flex flex-col gap-4 w-2/3 max-xl:w-full">
         {dropdowns.map((dropdown, index) => (
           <div key={index} className="rounded-lg shadow-md bg-white">
             <button
