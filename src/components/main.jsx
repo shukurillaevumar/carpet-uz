@@ -24,7 +24,7 @@ export default function Main() {
           width={250}
           className="max-xl:hidden"
         />
-        <Link to="faq" smooth={true} duration={500}>
+        <Link to="faq" smooth={true} duration={500} className="max-sm:hidden">
           <ContactUs />
         </Link>
       </div>
